@@ -92,3 +92,53 @@ p2 has won
 game over
 
 '''
+
+
+
+
+
+from random import randint
+
+class Player:
+    def __init__(self, name):
+        self.score = 0
+        self.name = name
+
+    def roll(self, opp):
+        dice = randint(1, 6)
+        self.score += dice
+        if dice == 1:
+            opp.score += 1
+        print(self.name,':', self.score)
+        print(opp.name,':', opp.score)
+        print("=" * 10)
+
+    def has_won(self):
+        if self.score >= 20:
+            print(self.name, 'has won')
+            return True
+        else:
+            return False
+
+
+p1 = Player('p1')
+p2 = Player('p2')
+currently_playing = True
+def gameover():
+        currently_playing = False
+        print("="*10)
+        print("game over")
+
+while True:
+
+    if p1.has_won() or p2.has_won():
+        gameover()
+        break
+
+    else:
+        p1.roll(p2)
+        if p1.has_won() or p2.has_won():
+            gameover()
+            break
+        p2.roll(p1)
+
