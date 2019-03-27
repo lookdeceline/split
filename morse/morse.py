@@ -85,13 +85,13 @@ class MorseTalk:
                 f_out += "\n"
             i += 1
 
-        fw = open("inception_eng_to_morse_new2.txt", "w")
+        fw = open("inception_eng_to_morse.txt", "w")
         fw.write(f_out)
     # ##############################################################3
 
     # morse -> alpha ###############################################
     def m_to_n(self):
-        f = open("inception_eng_to_morse_new2.txt", "r")
+        f = open("inception_eng_to_morse.txt", "r")
         f_in = f.read()
 
         i = 0
@@ -106,7 +106,7 @@ class MorseTalk:
             f_out += naturalline + "\n"
             i += 1
 
-        fw = open("inception_morse_to english_new2.txt", "w")
+        fw = open("inception_morse_to english.txt", "w")
         fw.write(f_out)
     # more -> alpha ###############################################
 
