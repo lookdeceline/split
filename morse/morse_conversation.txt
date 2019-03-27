@@ -1,0 +1,60 @@
+morse conversation
+
+
+TASK1.
+input: line-to-line conversation in English language. 
+output: line-to-line encryption in morse code. 
+	- You must add at the start of each line the name of the spy of the line. 
+	- The conversation starts by "cobb", and each spy takes turn by line.
+	- You must add a space in between morse codes. 
+		Ex) 'D' = '-..'  'O' = '---'
+		    DO ===> -.. ---
+	- Every space in natural language must be converted to "/".
+
+	- Write the final output as a 'inception_morse.txt' file.
+
+sample input : 
+	...
+	...
+	WHERE WERE THEY HOLDING YOU
+	THEY HAD US IN THE BACK OF A VAN
+	...
+	...
+
+sample output:
+	...
+	...
+	cobb: .-- .... . .-. . /.-- . .-. . /- .... . -.-- /.... --- .-.. -.. .. -. --. /-.-- --- ..- /
+	fischer: - .... . -.-- /.... .- -.. /..- ... /.. -. /- .... . /-... .- -.-. -.- /--- ..-. /.- /...- .- -. /
+	...
+	...
+
+
+TASK2. 
+input: line-to-line encryption in morse code (output from task1)
+output: 
+	- line-to-line conversation in English language. 
+	- You must include at the start of each line the name of the spy of the line.
+	- Write the final output as a 'inception_eng.txt' file.
+
+
+
+PROGRAMMING INSTRUCTION:
+- Using class Spy, create two spy instances named "cobb" and "fischer", who talk back and forth through the English language/ morse code.
+
+- Each spy has the ability to :
+	- read in string input
+	- convert alphabets to morse code
+	- convert morse code to alphabets
+	- record every English sentence they have said
+
+- Feel free to use the following dictionary for morse code / natural language conversions.
+
+dic = {
+    '.-':'A','-...':'B','-.-.':'C','-..':'D','.':'E','..-.':'F',
+    '--.':'G','....':'H','..':'I','.---':'J','-.-':'K','.-..':'L',
+    '--':'M','-.':'N','---':'O','.--.':'P','--.-':'Q','.-.':'R',
+    '...':'S','-':'T','..-':'U','...-':'V','.--':'W','-..-':'X',
+    '-.--':'Y','--..':'Z'
+}
+
